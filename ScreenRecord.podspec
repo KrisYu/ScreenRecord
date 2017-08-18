@@ -6,6 +6,6 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = "KrisYu"
   s.platform     = :osx, "10.9"
-  s.source       = { :git => "https://github.com/KrisYu/ScreenRecord.git" }
+  s.source       = { :git => "https://github.com/KrisYu/ScreenRecord.git", :tag => "0.1.0" }
   s.source_files = "ScreenRecord/*.swift"
 end
