@@ -8,18 +8,18 @@
 
 import AVFoundation
 
-func recordScreen(destination: URL, displayId: CGDirectDisplayID, cropRect: CGRect?, audioDevice: AVCaptureDevice?) throws -> Recorder {
+public func recordScreen(destination: URL, displayId: CGDirectDisplayID, cropRect: CGRect?, audioDevice: AVCaptureDevice?) throws -> Recorder {
     return try Recorder.init(destination: destination, displayId: displayId, cropRect: cropRect, audioDevice: audioDevice)
 }
 
-func recordScreen(destination: URL) throws -> Recorder{
+public func recordScreen(destination: URL) throws -> Recorder{
     return try Recorder.init(destination: destination, displayId: CGMainDisplayID(), cropRect: nil, audioDevice: nil)
 }
 
 
 
 
-enum RecorderError : String,Error {
+public enum RecorderError : String,Error {
     case invalidDisplay = "The display id passed in is invalid"
     case invalidAudioDevice = "The audio device is invalid"
     case couldNotAddScreen = "Could not add screen to input"
@@ -28,14 +28,14 @@ enum RecorderError : String,Error {
 }
 
 
-class Recorder: NSObject {
+public class Recorder: NSObject {
     private let destination: URL
     private let session: AVCaptureSession
     private let output: AVCaptureMovieFileOutput
     
     
     
-    init(destination: URL, displayId: CGDirectDisplayID, cropRect: CGRect?, audioDevice: AVCaptureDevice?) throws {
+    public init(destination: URL, displayId: CGDirectDisplayID, cropRect: CGRect?, audioDevice: AVCaptureDevice?) throws {
         
         self.destination = destination
         session = AVCaptureSession()
@@ -80,20 +80,20 @@ class Recorder: NSObject {
         }
     }
     
-    func start()  {
+    public func start()  {
         session.startRunning()
         output.startRecording(toOutputFileURL: destination, recordingDelegate: self)
     }
     
-    func pause() {
+    public func pause() {
         output.pauseRecording()
     }
     
-    func resume() {
+    public func resume() {
         output.resumeRecording()
     }
     
-    func stop() {
+    public func stop() {
         output.stopRecording()
         session.stopRunning()
     }
@@ -103,10 +103,10 @@ class Recorder: NSObject {
 
 extension Recorder: AVCaptureFileOutputRecordingDelegate {
     
-    func capture(_ captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAt fileURL: URL!, fromConnections connections: [Any]!) {
+    public func capture(_ captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAt fileURL: URL!, fromConnections connections: [Any]!) {
     }
     
-    func capture(_ captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAt outputFileURL: URL!, fromConnections connections: [Any]!, error: Error!) {
+    public func capture(_ captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAt outputFileURL: URL!, fromConnections connections: [Any]!, error: Error!) {
     }
 }
 
