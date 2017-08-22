@@ -1,7 +1,12 @@
 # ScreenRecord  
 
 
-[![GitHub license](https://img.shields.io/github/license/nirix/swift-screencapture.svg)]() [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![CocoaPods](https://img.shields.io/cocoapods/v/ScreenCapture.svg)](https://cocoapods.org/pods/ScreenCapture)
+![language swift ](https://img.shields.io/badge/language-swift-orange.svg) 
+![GitHub license](https://img.shields.io/cocoapods/l/ScreenRecord.svg?style=flat)
+![](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
+
+
+
 
 A Swift framework to easily record the screen on OS X.
 
