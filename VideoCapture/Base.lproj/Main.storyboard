@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="VideoCapture" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="VideoCapture" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About VideoCapture" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                                        <menuItem title="Quit VideoCapture" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="File" id="dMs-cI-mzQ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="File" id="bib-Uj-vzu">
+                                    <items>
+                                        <menuItem title="Record" keyEquivalent="r" id="Was-JA-tGl">
+                                            <connections>
+                                                <action selector="recordButtonTouched:" target="Ady-hI-5gd" id="tuk-2v-vwc"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Stop" keyEquivalent="s" id="IAo-SY-fd9">
+                                            <connections>
+                                                <action selector="stopButtonTouched:" target="Ady-hI-5gd" id="EPv-LO-Dhf"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Help" id="wpr-3q-Mcd">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
+                                    <items>
+                                        <menuItem title="VideoCapture Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                            <connections>
+                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="VideoCapture" customModuleProvider="target">
+                    <connections>
+                        <outlet property="recordMenuItem" destination="Was-JA-tGl" id="Z00-9v-tfS"/>
+                        <outlet property="stopMenuItem" destination="IAo-SY-fd9" id="kfg-VU-zJx"/>
+                    </connections>
+                </customObject>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="VideoCapture" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="VideoCaptrue" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="VideoCapture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box boxType="custom" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="R21-Z5-6p5">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="35"/>
+                                <view key="contentView" id="l7j-56-CAR">
+                                    <rect key="frame" x="1" y="1" width="478" height="33"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uME-d5-9MG">
+                                            <rect key="frame" x="407" y="-1" width="69" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Aqk-Ec-CTu">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="stopButtonTouched:" target="XfG-lQ-9wD" id="g38-bU-FD9"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tyN-oN-gGq">
+                                            <rect key="frame" x="318" y="-1" width="83" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Record" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mFY-sM-ahG">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="recordButtonTouched:" target="XfG-lQ-9wD" id="nKB-hA-nFu"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0lM-83-OVM">
+                                            <rect key="frame" x="247" y="4" width="61" height="25"/>
+                                            <buttonCell key="cell" type="check" title="Sound" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ca6-8p-7Qy">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uME-d5-9MG" firstAttribute="leading" secondItem="tyN-oN-gGq" secondAttribute="trailing" constant="18" id="8uz-XX-PcY"/>
+                                        <constraint firstItem="uME-d5-9MG" firstAttribute="top" secondItem="l7j-56-CAR" secondAttribute="top" constant="6" id="Ago-S4-52h"/>
+                                        <constraint firstAttribute="bottom" secondItem="tyN-oN-gGq" secondAttribute="bottom" constant="6" id="BCS-d3-Xvh"/>
+                                        <constraint firstItem="0lM-83-OVM" firstAttribute="top" secondItem="l7j-56-CAR" secondAttribute="top" constant="6" id="CND-6O-p1j"/>
+                                        <constraint firstAttribute="bottom" secondItem="uME-d5-9MG" secondAttribute="bottom" constant="6" id="hFd-jZ-U8a"/>
+                                        <constraint firstAttribute="trailing" secondItem="uME-d5-9MG" secondAttribute="trailing" constant="8" id="qJN-4f-c7e"/>
+                                        <constraint firstAttribute="bottom" secondItem="0lM-83-OVM" secondAttribute="bottom" constant="6" id="qho-l8-Muw"/>
+                                        <constraint firstItem="tyN-oN-gGq" firstAttribute="top" secondItem="l7j-56-CAR" secondAttribute="top" constant="6" id="vRm-fa-rAK"/>
+                                        <constraint firstItem="tyN-oN-gGq" firstAttribute="leading" secondItem="0lM-83-OVM" secondAttribute="trailing" constant="18" id="yLM-U1-wNl"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="dM2-ui-xxg"/>
+                                </constraints>
+                                <color key="fillColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="R21-Z5-6p5" secondAttribute="bottom" id="I86-y7-cWQ"/>
+                            <constraint firstAttribute="trailing" secondItem="R21-Z5-6p5" secondAttribute="trailing" id="OgC-LU-T7E"/>
+                            <constraint firstItem="R21-Z5-6p5" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="xdY-sV-TyG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomBox" destination="R21-Z5-6p5" id="VDL-7h-MfO"/>
+                        <outlet property="recordButton" destination="tyN-oN-gGq" id="TCB-1t-sMq"/>
+                        <outlet property="soundButton" destination="0lM-83-OVM" id="bda-Om-cGa"/>
+                        <outlet property="stopButton" destination="uME-d5-9MG" id="sPc-td-e4t"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+    </scenes>
+</document>

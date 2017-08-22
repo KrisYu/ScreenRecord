@@ -9,13 +9,53 @@
 /* Begin PBXBuildFile section */
 		C88FFAB91F469B07002B8458 /* ScreenRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = C88FFAB71F469B07002B8458 /* ScreenRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C88FFAC01F469B3C002B8458 /* ScreenRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88FFABF1F469B3C002B8458 /* ScreenRecord.swift */; };
+		C8B0DF411F47E24F0043CE56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B0DF401F47E24F0043CE56 /* AppDelegate.swift */; };
+		C8B0DF431F47E24F0043CE56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B0DF421F47E24F0043CE56 /* ViewController.swift */; };
+		C8B0DF451F47E24F0043CE56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B0DF441F47E24F0043CE56 /* Assets.xcassets */; };
+		C8B0DF481F47E24F0043CE56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B0DF461F47E24F0043CE56 /* Main.storyboard */; };
+		C8B0DF4E1F47E2ED0043CE56 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B0DF4D1F47E2ED0043CE56 /* WindowController.swift */; };
+		C8B0DF501F47E77B0043CE56 /* Window+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B0DF4F1F47E77B0043CE56 /* Window+Extension.swift */; };
+		C8B0DF521F47ED9F0043CE56 /* ScreenRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88FFAB41F469B07002B8458 /* ScreenRecord.framework */; };
+		C8B0DF531F47ED9F0043CE56 /* ScreenRecord.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C88FFAB41F469B07002B8458 /* ScreenRecord.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C8B0DF541F47ED9F0043CE56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C88FFAAB1F469B07002B8458 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C88FFAB31F469B07002B8458;
+			remoteInfo = ScreenRecord;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C8B0DF561F47ED9F0043CE56 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C8B0DF531F47ED9F0043CE56 /* ScreenRecord.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C88FFAB41F469B07002B8458 /* ScreenRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScreenRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88FFAB71F469B07002B8458 /* ScreenRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenRecord.h; sourceTree = "<group>"; };
 		C88FFAB81F469B07002B8458 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C88FFABF1F469B3C002B8458 /* ScreenRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenRecord.swift; sourceTree = "<group>"; };
+		C8B0DF3E1F47E24F0043CE56 /* VideoCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8B0DF401F47E24F0043CE56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C8B0DF421F47E24F0043CE56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8B0DF441F47E24F0043CE56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8B0DF471F47E24F0043CE56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C8B0DF491F47E24F0043CE56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8B0DF4D1F47E2ED0043CE56 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		C8B0DF4F1F47E77B0043CE56 /* Window+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Window+Extension.swift"; path = "Extensions/Window+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +66,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C8B0DF3B1F47E24F0043CE56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8B0DF521F47ED9F0043CE56 /* ScreenRecord.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				C88FFAB61F469B07002B8458 /* ScreenRecord */,
+				C8B0DF3F1F47E24F0043CE56 /* VideoCapture */,
 				C88FFAB51F469B07002B8458 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				C88FFAB41F469B07002B8458 /* ScreenRecord.framework */,
+				C8B0DF3E1F47E24F0043CE56 /* VideoCapture.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,6 +103,28 @@
 				C88FFABF1F469B3C002B8458 /* ScreenRecord.swift */,
 			);
 			path = ScreenRecord;
+			sourceTree = "<group>";
+		};
+		C8B0DF3F1F47E24F0043CE56 /* VideoCapture */ = {
+			isa = PBXGroup;
+			children = (
+				C8B0DF401F47E24F0043CE56 /* AppDelegate.swift */,
+				C8B0DF421F47E24F0043CE56 /* ViewController.swift */,
+				C8B0DF441F47E24F0043CE56 /* Assets.xcassets */,
+				C8B0DF461F47E24F0043CE56 /* Main.storyboard */,
+				C8B0DF511F47E77F0043CE56 /* Extensions */,
+				C8B0DF4D1F47E2ED0043CE56 /* WindowController.swift */,
+				C8B0DF491F47E24F0043CE56 /* Info.plist */,
+			);
+			path = VideoCapture;
+			sourceTree = "<group>";
+		};
+		C8B0DF511F47E77F0043CE56 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C8B0DF4F1F47E77B0043CE56 /* Window+Extension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,19 +159,45 @@
 			productReference = C88FFAB41F469B07002B8458 /* ScreenRecord.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		C8B0DF3D1F47E24F0043CE56 /* VideoCapture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8B0DF4C1F47E24F0043CE56 /* Build configuration list for PBXNativeTarget "VideoCapture" */;
+			buildPhases = (
+				C8B0DF3A1F47E24F0043CE56 /* Sources */,
+				C8B0DF3B1F47E24F0043CE56 /* Frameworks */,
+				C8B0DF3C1F47E24F0043CE56 /* Resources */,
+				C8B0DF561F47ED9F0043CE56 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8B0DF551F47ED9F0043CE56 /* PBXTargetDependency */,
+			);
+			name = VideoCapture;
+			productName = VideoCapture;
+			productReference = C8B0DF3E1F47E24F0043CE56 /* VideoCapture.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C88FFAAB1F469B07002B8458 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = XueYu;
 				TargetAttributes = {
 					C88FFAB31F469B07002B8458 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = L2UHX34QKF;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Manual;
+					};
+					C8B0DF3D1F47E24F0043CE56 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = L2UHX34QKF;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -109,6 +207,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = C88FFAAA1F469B07002B8458;
 			productRefGroup = C88FFAB51F469B07002B8458 /* Products */;
@@ -116,6 +215,7 @@
 			projectRoot = "";
 			targets = (
 				C88FFAB31F469B07002B8458 /* ScreenRecord */,
+				C8B0DF3D1F47E24F0043CE56 /* VideoCapture */,
 			);
 		};
 /* End PBXProject section */
@@ -125,6 +225,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8B0DF3C1F47E24F0043CE56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8B0DF451F47E24F0043CE56 /* Assets.xcassets in Resources */,
+				C8B0DF481F47E24F0043CE56 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +248,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C8B0DF3A1F47E24F0043CE56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8B0DF431F47E24F0043CE56 /* ViewController.swift in Sources */,
+				C8B0DF501F47E77B0043CE56 /* Window+Extension.swift in Sources */,
+				C8B0DF4E1F47E2ED0043CE56 /* WindowController.swift in Sources */,
+				C8B0DF411F47E24F0043CE56 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C8B0DF551F47ED9F0043CE56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C88FFAB31F469B07002B8458 /* ScreenRecord */;
+			targetProxy = C8B0DF541F47ED9F0043CE56 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C8B0DF461F47E24F0043CE56 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8B0DF471F47E24F0043CE56 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C88FFABA1F469B07002B8458 /* Debug */ = {
@@ -247,7 +386,7 @@
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L2UHX34QKF;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -272,7 +411,7 @@
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L2UHX34QKF;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -285,6 +424,36 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C8B0DF4A1F47E24F0043CE56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L2UHX34QKF;
+				INFOPLIST_FILE = VideoCapture/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xueyu.VideoCapture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C8B0DF4B1F47E24F0043CE56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L2UHX34QKF;
+				INFOPLIST_FILE = VideoCapture/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xueyu.VideoCapture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -306,6 +475,15 @@
 			buildConfigurations = (
 				C88FFABD1F469B07002B8458 /* Debug */,
 				C88FFABE1F469B07002B8458 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8B0DF4C1F47E24F0043CE56 /* Build configuration list for PBXNativeTarget "VideoCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8B0DF4A1F47E24F0043CE56 /* Debug */,
+				C8B0DF4B1F47E24F0043CE56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
